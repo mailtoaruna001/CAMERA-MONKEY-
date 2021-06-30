@@ -66,7 +66,7 @@ function draw() {
  if(monkey.isTouching(fruitsgroup)){
    fruitsgroup.destroyEach();
    score = score +1;
-  
+  monkey.scale=0.4;
  }
   switch (score){
     case 10 : monkey. scale = 0.2 ;
@@ -80,7 +80,7 @@ function draw() {
   }
    
   if(monkey.isTouching(obstaclesgroup)){
-    monkey.scale = 0.08;
+    monkey.scale = 0.1;
   }
 
   
@@ -99,9 +99,9 @@ function draw() {
 
  
 function fruit(){
-  if(frameCount%50===0){
+  if(frameCount%110===0){
     var banana=createSprite(600,290,30,10);
-    banana.scale=0.1;
+    banana.scale=0.05;
     banana.velocityX=-4;
     banana.y = Math.round(random(100,140));
     banana.addImage(bananaimg);
